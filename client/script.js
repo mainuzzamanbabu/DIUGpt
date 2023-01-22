@@ -61,6 +61,27 @@ function chatStripe(isAi, value, uniqueId) {
     `
     )
 }
+// const textarea = document.getElementById("prompt")
+// textarea.addEventListener("keydown", function (e) {
+//     if (e.code === "Enter" && e.shiftKey) {
+//         e.preventDefault();
+//         var s = this.selectionStart;
+//         this.value = this.value.substring(0, this.selectionStart) + "\n" + this.value.substring(this.selectionEnd);
+//         this.selectionEnd = s + 1;
+//     }
+// });
+// const textarea = document.getElementById("prompt")
+// textarea.addEventListener("keydown", function (e) {
+//     if ((e.code === "Enter" || e.code === "NumpadEnter") && e.shiftKey) {
+//         e.preventDefault();
+//         var s = this.selectionStart;
+//         this.value = this.value.substring(0, this.selectionStart) + "\n" + this.value.substring(this.selectionEnd);
+//         this.selectionEnd = s + 1;
+//     }
+// });
+
+
+
 
 const handleSubmit = async (e) => {
     e.preventDefault()
@@ -86,7 +107,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('http://localhost:5000/', {
+    const response = await fetch('http://194.233.78.140:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
+  /* height: 100%vh; */
 }
 
 body {
@@ -14,7 +15,8 @@ body {
 #app {
   width: 100vw;
   height: 100vh;
-  background: #d2dbee;
+  /* background: #d2dbee; */
+  background: #edf6fa;
 
   display: flex;
   flex-direction: column;
@@ -65,8 +67,8 @@ body {
 }
 
 .profile {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 
   /* background: #c2c519; */
@@ -78,8 +80,8 @@ body {
 
 .ai .profile {
   /* background: #a31061; */
-   width: 50px;
-  height: 50px;
+   width: 150px;
+  height: 150px;
   border-radius: 10px;
 
 }
@@ -92,7 +94,7 @@ body {
 
 .message {
   flex: 1;
-  padding-top: 12px;
+  padding-top: 40px;
 
   color: #000000;
   font-size: 20px;
@@ -127,11 +129,16 @@ form {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  position: fixed;
+  bottom: 0;
+  height: 6%;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 textarea {
-  width: 100%;
-
+  width: 80%;
+  /* height: 50%; */
   color: rgb(0, 0, 0);
   font-size: 18px;
 
@@ -140,6 +147,27 @@ textarea {
   border-radius: 5px;
   border: none;
   outline: none;
+  position: fixed;
+  bottom: 12px;
+  height: 5vh;
+  /* flex: 3; */
+ 
+  
+}
+@media only screen and (max-width: 600px) {
+  textarea {
+    width: 100%;
+  }
+}
+
+/* Style the placeholder text */
+textarea::placeholder {
+  color: gray;
+}
+
+/* Clean the text while typing */
+textarea:focus::placeholder {
+  color: transparent;
 }
 
 button {
@@ -150,6 +178,10 @@ button {
 }
 
 form img {
+  position: absolute;
+  right: 10px; /* positions icon 10px from the right edge of the form */
+  top: 50%; /* centers icon vertically within the form */
+  transform: translateY(-50%); /* centers icon vertically within the form */
   width: 30px;
   height: 30px;
 }
